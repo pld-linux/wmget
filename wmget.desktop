@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=wmget
 Comment=Background download manager
-Comment[pl]=Pracuj±cy w tle program do ¶ci±gaia plików
+Comment[pl]=PracujÄ…cy w tle program do pobierania plikÃ³w
 Icon=wmget.xpm
 Exec=/usr/X11R6/bin/wmget
 Terminal=0
 Type=Aplikacje
+# vi: encoding=utf-8
