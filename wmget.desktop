@@ -6,4 +6,5 @@ Icon=wmget.xpm
 Exec=/usr/bin/wmget
 Terminal=0
 Type=Aplikacje
+Encoding=UTF-8
 # vi: encoding=utf-8
