@@ -10,3 +10,14 @@ diff -durN wmget.orig/Makefile wmget/Makefile
  # The following line is what I use during development
  #CFLAGS:=	$(CFLAGS) -Werror -g
  LDFLAGS=	-L/usr/X11R6/lib -lXpm -lXext -lX11 -lm -lcurl
+--- wmget/dockapp/Makefile~	Thu Jul  4 02:35:59 2002
++++ wmget/dockapp/Makefile	Thu Jul  4 02:35:59 2002
+@@ -2,7 +2,7 @@
+ 
+ DAOBJS=		da_run.o da_x.o da_mouse.o
+ 
+-CFLAGS=		-ansi -Wall -W -Werror -g
++CFLAGS=		-ansi -Wall -W -Werror $(OPTFLAGS)
+ LDFLAGS=	-L/usr/X11R6/lib -lXpm -lXext -lX11
+ 
+ dockapp.a:	$(DAOBJS)
