@@ -1,18 +1,7 @@
-diff -durN wmget.orig/Makefile wmget/Makefile
---- wmget.orig/Makefile	Tue Jul  2 15:34:01 2002
-+++ wmget/Makefile	Tue Jul  2 15:40:09 2002
-@@ -52,7 +52,7 @@
- INSTALLBIN=	install -m 555
- INSTALLMAN=	install -m 444
- CC=		gcc
--CFLAGS=		-ansi -Wall -W -I/usr/X11R6/include -D_GNU_SOURCE
-+CFLAGS=		-ansi -Wall -W -I/usr/X11R6/include -D_GNU_SOURCE $(OPTFLAGS)
- # The following line is what I use during development
- #CFLAGS:=	$(CFLAGS) -Werror -g
- LDFLAGS=	-L/usr/X11R6/lib -lXpm -lXext -lX11 -lm -lcurl
---- wmget/dockapp/Makefile~	Thu Jul  4 02:35:59 2002
-+++ wmget/dockapp/Makefile	Thu Jul  4 02:35:59 2002
-@@ -2,7 +2,7 @@
+diff -urN wmget.orig/dockapp/Makefile wmget/dockapp/Makefile
+--- wmget.orig/dockapp/Makefile	2004-04-20 19:44:39.805916032 +0200
++++ wmget/dockapp/Makefile	2004-04-20 19:47:40.433456472 +0200
+@@ -22,7 +22,7 @@
  
  DAOBJS=		da_run.o da_x.o da_mouse.o
  
@@ -21,3 +10,15 @@ diff -durN wmget.orig/Makefile wmget/Makefile
  LDFLAGS=	-L/usr/X11R6/lib -lXpm -lXext -lX11
  
  dockapp.a:	$(DAOBJS)
+diff -urN wmget.orig/Makefile wmget/Makefile
+--- wmget.orig/Makefile	2004-04-20 19:44:39.804916184 +0200
++++ wmget/Makefile	2004-04-20 19:46:53.566581320 +0200
+@@ -51,7 +51,7 @@
+ INSTALLBIN=	install -m 555
+ INSTALLMAN=	install -m 444
+ CC=		gcc
+-CFLAGS=		-Wall -W -I/usr/X11R6/include -O
++CFLAGS=		-Wall -W -I/usr/X11R6/include $(OPTFLAGS)
+ # The following line is what I use during development
+ #CFLAGS:=	$(CFLAGS) -Werror -g 
+ LDFLAGS=	-L/usr/X11R6/lib -lXpm -lXext -lX11 -lm -lcurl
