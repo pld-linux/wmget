@@ -38,12 +38,12 @@ biblioteki libcurl, która jest czê¶ci± programu cURL.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_pixmapsdir},%{_applnkdir}/Network}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_pixmapsdir},%{_applnkdir}/DockApplets}
 
 install wmget $RPM_BUILD_ROOT%{_bindir}/wmget
 install wmget.1 $RPM_BUILD_ROOT%{_mandir}/man1/wmget.1
 install wmget.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/wmget.xpm
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%{_applnkdir}/Network/wmget.desktop
+#%{_applnkdir}/DockApplets/wmget.desktop
 %{_pixmapsdir}/*.xpm
