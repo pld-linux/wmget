@@ -2,7 +2,7 @@ Summary:	wmget - Background download manager in a Window Maker dock app
 Summary(pl):	wmget - pracuj±cy w tle program do ¶ci±gania plików dla doku Window Makera
 Name:		wmget
 Version:	0.6.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Window Managers/Tools
 Source0:	http://amtrickey.net/download/%{name}-%{version}-src.tar.gz
@@ -33,7 +33,10 @@ biblioteki libcurl, która jest czê¶ci± programu cURL.
 %patch0 -p1
 
 %build
-%{__make} OPTFLAGS="%{rpmcflags}" CC="%{__cc}"
+%{__make} \
+	CC="%{__cc}" \
+	OPTFLAGS="%{rpmcflags}" \
+	LDFLAGS="-L/usr/X11R6/%{_lib} -lXpm -lXext -lX11 -lm -lcurl"
 
 %install
 rm -rf $RPM_BUILD_ROOT
