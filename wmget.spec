@@ -9,6 +9,7 @@ Vendor:		Aaron Trickey
 URL:		http://amtrickey.net/wmget/index.html
 Source0:	http://amtrickey.net/download/%{name}-%{version}-src.tar.gz
 Source1:	%{name}.desktop
+Patch0:		%{name}-CFLAGS.patch
 Icon:		wmget.xpm
 BuildArch:	i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,11 +33,11 @@ doskona³ej biblioteki libcurl, która jest czê¶ci± programu cURL.
 
 %prep
 %setup -qn %{name}
+%patch0 -p1
 
 
 %build
-%{rpmcflags}
-%{__make}
+%{__make} OPTFLAGS="${rpmcflags}"
 
 
 %install
