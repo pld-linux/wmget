@@ -3,7 +3,7 @@ Summary(pl):	wmget - pracuj±cy w tle program do ¶ci±gania plików w postaci doku 
 Name:		wmget
 Version:	0.4.4
 Release:	1
-Group:		Applications/Network
+Group:		Aplikacje/Sieciowe
 ######		Unknown group!
 License:	MIT
 Vendor:		Aaron Trickey
@@ -16,36 +16,50 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_xbindir	/usr/X11R6/bin
 %define		_xmandir	/usr/X11R6/man
+
 %description
+Wmget is a dock app for the GNU Window Maker window manager (or one of
+the many other WM's which support dockapps) which makes it more
+convenient to perform long downloads in the backgound. It uses the
+excellent libcurl library, part of the cURL automated-download
+
+
 %description -l pl
 Wmget jest aplikacj± - dokiem dla mened¿era okien GNU Window Maker
 (lub innych mened¿erów obs³uguj±cych aplikacje - doki). Wmget sprawia
 ¿e ¶ci±ganie plików w tle jest bardziej wygodne. Korzysta on z
 doskona³ej biblioteki libcurl, która jest czê¶ci± programu cURL.
+
+
 %prep
 %setup -qn %{name}
+
+
 %build
+%{rpmcflags}
 %{__make}
-%install
+
+
+install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_xbindir},%{_xmandir}/man1}
-
 install -s wmget $RPM_BUILD_ROOT%{_xbindir}/wmget
 install wmget.1 $RPM_BUILD_ROOT%{_xmandir}/man1/wmget.1
 %__install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 install wmget.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/wmget.xpm
 install dockapp/unittest.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/unittest.xpm
-gzip -9nf $RPM_BUILD_ROOT%{_xmandir}/man1/* \
-	  README wmget.pod
 %__install -d $RPM_BUILD_ROOT%{_prefix}/X11R6/share/applnk/Network
 install %{SOURCE1} $RPM_BUILD_ROOT%{_prefix}/X11R6/share/applnk/Network
+
+
 %clean
 rm -fr $RPM_BUILD_ROOT
+
+
 %files
 %defattr(644,root,root,755)
+%doc README
 %attr(755,root,root)%{_xbindir}/*
 %{_xmandir}/man1/*
 %{_applnkdir}/Network/wmget.desktop
 %{_pixmapsdir}/*.xpm
-%doc *.gz
-%verify (not md5 size mtime)
