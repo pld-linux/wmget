@@ -15,8 +15,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	curl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Wmget is a dock app for the GNU Window Maker window manager (or one of
