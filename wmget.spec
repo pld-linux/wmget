@@ -1,8 +1,8 @@
 Summary:	wmget - Background download manager in a Window Maker dock app
 Summary(pl):	wmget - pracuj±cy w tle program do ¶ci±gania plików dla doku Window Makera
 Name:		wmget
-Version:	0.4.4
-Release:	2
+Version:	0.5.0
+Release:	1
 License:	MIT
 Vendor:		Aaron Trickey
 Group:		X11/Applications/Networking
@@ -42,7 +42,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_pixmapsdir},%{_applnkdi
 install wmget $RPM_BUILD_ROOT%{_bindir}/wmget
 install wmget.1 $RPM_BUILD_ROOT%{_mandir}/man1/wmget.1
 install wmget.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/wmget.xpm
-install dockapp/unittest.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/unittest.xpm
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network
 
 %clean
