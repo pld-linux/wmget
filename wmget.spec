@@ -7,6 +7,7 @@ License:	MIT
 Vendor:		Aaron Trickey
 Group:		X11/Applications/Networking
 Source0:	http://amtrickey.net/download/%{name}-%{version}-src.tar.gz
+# Source0-md5:	7d0b169c5bb51a7ad13325583f674be1
 Source1:	%{name}.desktop
 Patch0:		%{name}-CFLAGS.patch
 Icon:		wmget.xpm
