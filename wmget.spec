@@ -26,7 +26,7 @@ excellent libcurl library, part of the cURL automated-download
 
 %description -l pl
 Wmget jest dokowaln± aplikacj± dla zarz±dcy okien GNU Window Maker
-(lub innych zarz±dców obs³uguj±cych aplikacje - doki). Wmget sprawia
+(lub innych zarz±dców obs³uguj±cych aplikacje - doki). Wmget sprawia,
 ¿e ¶ci±ganie plików w tle jest wygodniejsze. Korzysta on z doskona³ej
 biblioteki libcurl, która jest czê¶ci± programu cURL.
 
