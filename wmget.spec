@@ -3,8 +3,7 @@ Summary(pl):	wmget - pracuj±cy w tle program do ¶ci±gania plików w postaci doku 
 Name:		wmget
 Version:	0.4.4
 Release:	1
-Group:		Aplikacje/Sieciowe
-######		Unknown group!
+Group:		Applications/Networking
 License:	MIT
 Vendor:		Aaron Trickey
 URL:		http://amtrickey.net/wmget/index.html
@@ -40,15 +39,15 @@ doskona³ej biblioteki libcurl, która jest czê¶ci± programu cURL.
 %{__make}
 
 
-install
+%install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_xbindir},%{_xmandir}/man1}
 install -s wmget $RPM_BUILD_ROOT%{_xbindir}/wmget
 install wmget.1 $RPM_BUILD_ROOT%{_xmandir}/man1/wmget.1
-%__install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 install wmget.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/wmget.xpm
 install dockapp/unittest.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/unittest.xpm
-%__install -d $RPM_BUILD_ROOT%{_prefix}/X11R6/share/applnk/Network
+install -d $RPM_BUILD_ROOT%{_prefix}/X11R6/share/applnk/Network
 install %{SOURCE1} $RPM_BUILD_ROOT%{_prefix}/X11R6/share/applnk/Network
 
 
