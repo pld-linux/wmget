@@ -11,7 +11,6 @@ Source0:	http://amtrickey.net/download/%{name}-%{version}-src.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-CFLAGS.patch
 Icon:		wmget.xpm
-BuildArch:	i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_xbindir	/usr/X11R6/bin
@@ -37,7 +36,7 @@ doskona³ej biblioteki libcurl, która jest czê¶ci± programu cURL.
 
 
 %build
-%{__make} OPTFLAGS="${rpmcflags}"
+%{__make} OPTFLAGS="%{rpmcflags}"
 
 
 %install
