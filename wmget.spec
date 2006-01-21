@@ -9,7 +9,6 @@ Source0:	http://amtrickey.net/download/%{name}-%{version}-src.tar.gz
 # Source0-md5:	f4f196f3cf1c427e1f8321b4063c4917
 Source1:	%{name}.desktop
 Patch0:		%{name}-CFLAGS.patch
-Icon:		wmget.xpm
 URL:		http://amtrickey.net/wmget/
 BuildRequires:	XFree86-devel
 BuildRequires:	curl-devel
