@@ -1,5 +1,5 @@
 Summary:	wmget - Background download manager in a Window Maker dock app
-Summary(pl):	wmget - pracuj±cy w tle program do ¶ci±gania plików dla doku Window Makera
+Summary(pl.UTF-8):   wmget - pracujÄ…cy w tle program do Å›ciÄ…gania plikÃ³w dla doku Window Makera
 Name:		wmget
 Version:	0.6.0
 Release:	3
@@ -21,11 +21,11 @@ the many other WM's which support dockapps) which makes it more
 convenient to perform long downloads in the backgound. It uses the
 excellent libcurl library, part of the cURL automated-download
 
-%description -l pl
-Wmget jest dokowaln± aplikacj± dla zarz±dcy okien GNU Window Maker
-(lub innych zarz±dców obs³uguj±cych aplikacje - doki). Wmget sprawia,
-¿e ¶ci±ganie plików w tle jest wygodniejsze. Korzysta on z doskona³ej
-biblioteki libcurl, która jest czê¶ci± programu cURL.
+%description -l pl.UTF-8
+Wmget jest dokowalnÄ… aplikacjÄ… dla zarzÄ…dcy okien GNU Window Maker
+(lub innych zarzÄ…dcÃ³w obsÅ‚ugujÄ…cych aplikacje - doki). Wmget sprawia,
+Å¼e Å›ciÄ…ganie plikÃ³w w tle jest wygodniejsze. Korzysta on z doskonaÅ‚ej
+biblioteki libcurl, ktÃ³ra jest czÄ™Å›ciÄ… programu cURL.
 
 %prep
 %setup -qn %{name}
