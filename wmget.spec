@@ -2,7 +2,7 @@ Summary:	wmget - Background download manager in a Window Maker dock app
 Summary(pl):	wmget - pracuj±cy w tle program do ¶ci±gania plików dla doku Window Makera
 Name:		wmget
 Version:	0.6.0
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Window Managers/Tools
 Source0:	http://amtrickey.net/download/%{name}-%{version}-src.tar.gz
