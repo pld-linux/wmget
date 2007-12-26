@@ -2,11 +2,10 @@
 Name=wmget
 Comment=Background download manager
 Comment[pl]=Pracujący w tle program do pobierania plików
-Icon=wmget.xpm
+Icon=wmget
 Exec=/usr/bin/wmget
 Terminal=false
 Type=Aplikacje
-Encoding=UTF-8
 Categories=Applet;
 NotShowIn=GNOME;KDE;
 # vi: encoding=utf-8
